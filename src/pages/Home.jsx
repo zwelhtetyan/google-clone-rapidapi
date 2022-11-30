@@ -50,7 +50,7 @@ const Home = () => {
             <img
                src={logoLG}
                alt='logo_large'
-               width='45%'
+               width='40%'
                style={{ marginBottom: '1rem' }}
             />
 

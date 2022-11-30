@@ -4,9 +4,12 @@ import Footer from './Footer';
 import Header from './Header';
 
 const MainLayout = () => {
-   const { pathname } = useLocation();
+   const { pathname, search } = useLocation();
 
-   if (pathname === '/search') {
+   const urlSearchParam = new URLSearchParams(search);
+   const query = urlSearchParam.get('q');
+
+   if (pathname === '/search' || !query.trim().length) {
       return <Navigate to='/' />;
    }
 
@@ -23,7 +26,7 @@ const MainLayout = () => {
          {<Header />}
 
          <Box sx={styles}>
-            <Outlet />
+            <Outlet context={query} />
          </Box>
 
          {<Footer />}
