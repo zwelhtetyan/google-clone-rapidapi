@@ -4,16 +4,18 @@ import React from 'react';
 
 const NoResult = ({ query }) => {
    return (
-      <Box color='colors.c6'>
-         <Typography>
+      <Box color='colors.c6' fontSize={{ xs: '.875rem', sm: '1rem' }}>
+         <Typography fontSize='inherit'>
             Your search -{' '}
-            <Typography component='span' color='colors.c9'>
+            <Typography component='span' color='colors.c9' fontSize='inherit'>
                {query}
             </Typography>{' '}
             - did not match any documents.
          </Typography>
 
-         <Typography mt={2}>Suggestion:</Typography>
+         <Typography mt={2} fontSize='inherit'>
+            Suggestion:
+         </Typography>
 
          <ul>
             <li>Make sure that all words are spelled correctly.</li>

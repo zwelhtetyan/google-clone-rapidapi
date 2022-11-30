@@ -5,7 +5,12 @@ const Error = () => {
    const error = useRouteError();
 
    return (
-      <Typography textAlign='center' mt={3} color='colors.c9'>
+      <Typography
+         textAlign='center'
+         mt={3}
+         color='colors.c9'
+         fontSize={{ xs: '.875rem', sm: '1rem' }}
+      >
          {error.message}
       </Typography>
    );
