@@ -17,7 +17,7 @@ const PageNotFound = () => {
          <img
             src={logoSM}
             alt='logo'
-            width='130px'
+            width='150px'
             style={{ margin: 'auto', display: 'block' }}
          />
          <Typography mb={1} mt={2}>
