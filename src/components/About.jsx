@@ -42,7 +42,7 @@ const About = ({ knowledge_graph }) => {
          minWidth={{ md: '300px' }}
          maxWidth={{ md: '400px' }}
       >
-         <Typography variant='h5' color='colors.c9' mb={2}>
+         <Typography variant='h5' color='colors.c9'>
             About
          </Typography>
 
@@ -50,6 +50,7 @@ const About = ({ knowledge_graph }) => {
             <Chip
                label={website.split('www.')[1].replace('/', '')}
                variant='outlined'
+               sx={{ marginTop: 2 }}
                onClick={() => window.open(website, '_self')}
             />
          )}
