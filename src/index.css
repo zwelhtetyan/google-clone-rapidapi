@@ -1,0 +1,16 @@
+/* custom scrollbar */
+.dark::-webkit-scrollbar {
+   width: 12px;
+}
+
+.dark::-webkit-scrollbar-track {
+   background: #423f3f;
+}
+
+.dark::-webkit-scrollbar-thumb {
+   background: rgb(105, 104, 104);
+}
+
+.dark::-webkit-scrollbar-thumb:hover {
+   background: rgb(128, 127, 127);
+}
