@@ -1,7 +1,7 @@
 ## google-clone
 
 The API I use to display All page is 100 request per month and other three pages [Image, Videos, News] are 1000 per month.
-So If you fail to get the data with the status code [404] when you navigate in All page, may be it was exceeded monthly request limit.
+So If you fail to get the data with the status code [404], may be it was exceeded monthly request limit.
 
 ### Features
 
