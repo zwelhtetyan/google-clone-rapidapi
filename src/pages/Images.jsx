@@ -7,38 +7,35 @@ import Loading from '../utils/Loading';
 import NoResult from '../utils/NoResult';
 
 const Images = () => {
-   const query = useOutletContext();
+  const query = useOutletContext();
 
-   const {
-      data: images,
-      isLoading,
-      isError,
-      error,
-   } = useQuery(['getImages', query], () => getImages(query));
+  const {
+    data: images,
+    isLoading,
+    isError,
+    error,
+  } = useQuery(['getImages', query], () => getImages(query));
 
-   if (isLoading) return <Loading />;
+  if (isLoading) return <Loading />;
 
-   if (isError) {
-      throw new Error(error.message);
-   }
+  if (isError) {
+    throw new Error(error.message);
+  }
 
-   if (images.length === 0) return <NoResult query={query} />;
+  if (images.length === 0) return <NoResult query={query} />;
 
-   return (
-      <Stack
-         display='grid'
-         gridTemplateColumns={{
-            xs: 'repeat(auto-fit, minmax(150px, 1fr))',
-            sm: 'repeat(auto-fit, minmax(200px, 1fr))',
-         }}
-         gap={2}
-         mb={4}
-      >
-         {images.map((item, i) => (
-            <ImageItem key={i} {...item} />
-         ))}
-      </Stack>
-   );
+  return (
+    <Stack
+      display='grid'
+      gridTemplateColumns={'repeat(auto-fill, minmax(150px, 1fr))'}
+      gap={2}
+      mb={4}
+    >
+      {images.map((item, i) => (
+        <ImageItem key={i} {...item} />
+      ))}
+    </Stack>
+  );
 };
 
 export default Images;
